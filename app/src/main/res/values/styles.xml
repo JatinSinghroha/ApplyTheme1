@@ -10,7 +10,19 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
+    </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#FFF</item>
+        <item name="android:textColorSecondary">#FFF</item>
+<!--        <item name="colorBackgroundFloating">#000</item>-->
+<!--        <item name="actionOverflowMenuStyle">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>-->
+
+    </style>
+    
+    <style name="PopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#434343</item>
+        <item name="android:background">#fffcfff6</item>
     </style>
 
 </resources>

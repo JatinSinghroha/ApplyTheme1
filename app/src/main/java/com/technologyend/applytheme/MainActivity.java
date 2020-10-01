@@ -2,7 +2,11 @@ package com.technologyend.applytheme;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -26,5 +30,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String msg="";
+
+        switch (item.getItemId()) {
+            case R.id.discard:
+                msg = "Delete";
+                break;
+            case R.id.search:
+                msg = "Search";
+                break;
+            case R.id.settings:
+                msg = "Settings";
+                break;
+            case R.id.edit:
+                msg = "Edit";
+                break;
+            case R.id.exit:
+                msg = "Exit";
+                break;
+        }
+
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+
+        return super.onOptionsItemSelected(item);
     }
 }
